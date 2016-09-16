@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlipCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="ijd-lp-Ozk">
+                                <frame key="frameInset" minX="76" minY="170" width="222" height="322"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="3Iq-VG-nud"/>
+                                    <constraint firstAttribute="width" secondItem="ijd-lp-Ozk" secondAttribute="height" multiplier="111:161" id="qw4-g4-kui"/>
+                                    <constraint firstAttribute="width" constant="222" id="xmf-EI-jOT"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="goh-E1-bHj" appends="YES" id="gYW-E7-GmF"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ijd-lp-Ozk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IJC-Ro-LH9"/>
+                            <constraint firstItem="ijd-lp-Ozk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pOM-MS-cmF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="UIImageView" destination="ijd-lp-Ozk" id="O3M-ZA-mhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="goh-E1-bHj">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="NbQ-h0-U31"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="78" height="119"/>
+    </resources>
+</document>
